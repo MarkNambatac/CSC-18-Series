@@ -1,4 +1,7 @@
-
+""" Twitter Account Information
+Username: @BotMark36
+Link: https://twitter.com/BotMark36
+"""
 
 import json
 import oauth2
