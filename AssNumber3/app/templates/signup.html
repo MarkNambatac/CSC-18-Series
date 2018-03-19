@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Adding Student</title>
+</head>
+<body>
+
+	<form action="/register" method="POST">
+		{{form.hidden_tag()}}
+		{{form.id_no.label}}: {{form.id_no}}<BR>
+		<ul>
+			 {% for error in form.id_no.errors %}
+			 	<li style = "color:red;"> {{ error }}</li>
+			 {% endfor %}
+		 </ul>
+		{{form.name.label}}: {{form.name}}<BR>
+		<ul>
+			 {% for error in form.name.errors %}
+			 	<li style = "color:red;"> {{ error }}</li>
+			 {% endfor %}
+		 </ul>
+		{{form.course.label}}: {{form.course}}<BR>
+		<ul>
+			 {% for error in form.course.errors %}
+			 	<li style = "color:red;"> {{ error }}</li>
+			 {% endfor %}
+		 </ul>
+		{{form.submit}}
+	</form>
+	
+</body>
+</html>
+
+
+
+

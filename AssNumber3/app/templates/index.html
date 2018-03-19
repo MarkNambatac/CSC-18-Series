@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome</h1>
+	<button><a href="/register" style="text-decoration:none">Add Student</a></button>
+	<button><a href="/delete" style="text-decoration:none">Delete Student </a><br></button><br>
+	<br>
+	<button><a href="/update" style="text-decoration:none">Update Student </a><br></button>
+	<button><a href="/search" style="text-decoration:none">Search Student </a></button> <br>
+	<br>
+	<br>
+	<table border = "1">
+		<thead>
+            <tr>
+               <td colspan = "4" align="center"><b>Student Database</b></td>
+            </tr>
+         </thead>
+	<tr>
+	<th>Id Number</th>
+	<th>Name</th>
+	<th>Course</th>
+	</tr>
+	<tbody>
+		{% for user in data %}
+		<tr>
+			<td>{{user[0]}}</td>
+			<td>{{user[1]}}</td>
+			<td>{{user[2]}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+</body>
+</html>

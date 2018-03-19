@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deleting a Student</title>
+</head>
+<body>
+     <form action="/delete" method="POST">
+		{{form.hidden_tag()}}
+		{{form.del_id.label}}: {{form.del_id}}<BR>
+		 <ul>
+			 {% for error in form.del_id.errors %}
+			 	<li style = "color:red;"> {{ error }}</li>
+			 {% endfor %}
+		 </ul>
+		{{form.submit}}
+
+	</form>
+</body>
+</html>

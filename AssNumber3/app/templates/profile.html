@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+
+</head>
+<body>
+<h1>Profile</h1>
+    <table border = "1">
+	<tr>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Course</th>
+    </tr>
+	<tbody>
+		{% for user in data %}
+		<tr>
+			<td>{{user[0]}}</td>
+			<td>{{user[1]}}</td>
+			<td>{{user[2]}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+	<button><a href="/" style="text-decoration:none">Home</a></button>
+</body>
+</html>
